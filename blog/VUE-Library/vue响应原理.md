@@ -4,7 +4,7 @@ Vue.js的响应式原理依赖于[Object.defineProperty](https://developer.mozil
 
 
 
-![流程图](assets/16b22c8fe2629e68)
+![流程图](https://i.loli.net/2019/07/24/5d37c17fe0a6b32226.jpg)
 
 ### initData 方法
 
