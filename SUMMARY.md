@@ -27,3 +27,5 @@
 * [其他文档库](blog/Other-Library/index.md)
     * [Git](blog/Other-Library/Git Document Library/index.md)
         * [gitbook serve问题](blog/Other-Library/Git Document Library/gitbook.md)
+    * [HTTP](blog/Other-Library/index.md)
+        * [从 URL 输入到页面展现](blog/Other-Library/HTTP.md)
