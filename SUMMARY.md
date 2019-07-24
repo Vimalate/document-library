@@ -7,12 +7,12 @@
     * [我都知道的CSS](blog/我都知道的CSS.md)
 
 -----
-* [Javascript Library](README.md)
+* [Javascript 文档库](README.md)
     * [聊聊原型和原型链](blog/聊聊原型和原型链.md)
     * [我都知道的js](blog/我都知道的js.md)
 
 -----
-* [vue Library](README.md)
+* [vue 文档库](README.md)
     * [vuex](blog/vuex.md)
     * [vue123](blog/vue 123.md)
     * [vue响应原理](blog/vue响应原理.md)
