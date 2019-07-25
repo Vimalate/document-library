@@ -17,6 +17,7 @@
 -----
 * [Javascript 文档库](blog/Javascript-Library/index.md)
     * [聊聊原型和原型链](blog/Javascript-Library/聊聊原型和原型链.md)
+    * [new 实现原理](blog/Javascript-Library/new.md)
     * [我都知道的js](blog/Javascript-Library/我都知道的js.md)
 
 -----
