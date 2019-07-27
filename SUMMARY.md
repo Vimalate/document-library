@@ -37,3 +37,5 @@
         * [gitbook serve问题](blog/Other-Library/Git Document Library/gitbook.md)
     * [HTTP](blog/Other-Library/index.md)
         * [从 URL 输入到页面展现](blog/Other-Library/HTTP.md)
+    * [Markdown 奇淫技巧](blog/Other-Library/markdown.md)
+  
