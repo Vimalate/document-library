@@ -30,6 +30,7 @@
 -----
 * [力扣 LeetCode](blog/LeetCode-Library/index.md)
     * [121-买卖股票最佳时机](blog/LeetCode-Library/121-买卖股票最佳时机.md)
+    * [122-买卖股票最佳时机](blog/LeetCode-Library/122-买卖股票最佳时机2.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
