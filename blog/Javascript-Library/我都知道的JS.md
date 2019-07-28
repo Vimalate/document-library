@@ -168,6 +168,7 @@ Proxy不仅可以代理对象，还可以代理数组。还可以代理动态增
 
 ### 10、 JS String 和 new String的区别
 
+
 当通过new 调用 String()时,返回的是一个object
 
 ![](https://i.loli.net/2019/07/25/5d393a8ea4b7a36579.png)
