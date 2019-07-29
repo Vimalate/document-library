@@ -24,8 +24,9 @@
 -----
 * [Vue 文档库](blog/VUE-Library/index.md)
     * [vuex](blog/VUE-Library/vuex.md)
-    * [vue123](blog/VUE-Library/vue 123.md)
     * [vue响应原理](blog/VUE-Library/vue响应原理.md)
+    * [vue123](blog/VUE-Library/vue 123.md)
+    
 
 -----
 * [力扣 LeetCode](blog/LeetCode-Library/index.md)
