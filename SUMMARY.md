@@ -42,4 +42,6 @@
         * [gitbook serve问题](blog/Other-Library/Git Document Library/gitbook.md)
     * [HTTP](blog/Other-Library/index.md)
         * [从 URL 输入到页面展现](blog/Other-Library/HTTP.md)
+    * [能提高幸福感的一些技巧](blog/Other-Library/skill/index.md)
+        * [skill](blog/Other-Library/skill/skill.md)
     * [Markdown 奇淫技巧](blog/Other-Library/markdown.md)

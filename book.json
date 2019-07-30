@@ -30,7 +30,7 @@
             "user": "Vimalate",
             "repo": "document-library", 
             "type": "star",
-            "count": true,
+            "count": false,
             "size": "small"
           }, 
           {
