@@ -48,4 +48,4 @@
     * [Markdown 奇淫技巧](blog/Other-Library/markdown.md)
 
 
-* [随记杂谈](blog/essay/index.md)
+* [随笔杂谈](blog/essay/index.md)
