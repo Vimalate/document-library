@@ -30,14 +30,14 @@
             "user": "Vimalate",
             "repo": "document-library", 
             "type": "star",
-            "count": false,
+            "count": true,
             "size": "small"
           }, 
           {
             "user": "Vimalate",
             "width": "160", 
             "type": "follow", 
-            "count": true,
+            "count": false,
             "size": "small"
           }
         ]
