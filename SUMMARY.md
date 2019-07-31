@@ -46,3 +46,6 @@
     * [能提高幸福感的一些技巧](blog/Other-Library/skill/index.md)
         * [skill](blog/Other-Library/skill/skill.md)
     * [Markdown 奇淫技巧](blog/Other-Library/markdown.md)
+
+
+* [随记杂谈](blog/essay/index.md)
