@@ -24,3 +24,21 @@ overflow: hidden;
 ## postion fixed和transform的冲突
 
 我们知道这里 fixed 默认参照对像是**可视窗口**，如果transformEle (父元素)使用了transform，而fixedEle (子元素)使用了position: fixed，那么position: fixed不会有固定在可视窗口上，实际结果相当于相对transformEle元素定位，**就是fixed相对的不是可视窗口，而是transformELe**, 产生这样的原因主要是因为**transform和position: fixed使用了不同的坐标系统**
+
+## 已知父级盒子的宽高，子级img宽高未知，想让img铺满父级盒子且图片不能变形
+
+利用 CSS 的`object-fit` 属性
+
+关于[object-fit 详细](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit)
+
+```css
+div {
+    width: 100px;
+    height: 100px;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+```
