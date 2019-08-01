@@ -251,3 +251,17 @@ html 同 3
         }
 ```
 
+## 画一个直角三角形
+
+利用 border
+**代码 ：**
+
+```css
+div{
+        width: 0; 
+        border-left: 200px solid transparent;
+        border-bottom: 200px solid cyan;
+        border-right:  200px solid cyan;
+        border-top:  200px solid transparent;
+    }
+```
