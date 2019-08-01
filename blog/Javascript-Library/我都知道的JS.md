@@ -177,6 +177,17 @@ Proxy不仅可以代理对象，还可以代理数组。还可以代理动态增
 
 ![](https://i.loli.net/2019/07/25/5d393bc29256718027.png)
 
+## 实现add函数,让add(a)(b)和add(a,b)两种调用结果相同
 
+```js
+function add(a,b) {
+    if(!b){
+        return function (x){
+            return a+x
+        }
+    }
+    return a+b
+}
+```
 
 
