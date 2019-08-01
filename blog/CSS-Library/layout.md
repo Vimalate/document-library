@@ -235,3 +235,19 @@ html 同 3
 
 方案 5：并没有做到大部分浏览器兼容，不过以后grid是一个趋势
 
+
+
+## 如何实现一个最大的正方形
+
+利用 padding -bottom
+
+原理：对元素的margin设置百分数时，百分数是相对于父元素的width计算，不管是margin-top/margin-bottom还是margin-left/margin-right。当然，padding的原理也是一样的。
+
+```css
+.section{
+            width: 100%;
+            padding-bottom: 100%;
+            background-color: cyan;
+        }
+```
+
