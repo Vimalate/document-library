@@ -257,11 +257,38 @@ html 同 3
 **代码 ：**
 
 ```css
-div{
-        width: 0; 
-        border-left: 200px solid transparent;
-        border-bottom: 200px solid cyan;
-        border-right:  200px solid cyan;
-        border-top:  200px solid transparent;
+ div {
+        width: 0;
+        border: 200px solid transparent;
+        border-bottom-color: cyan;
+        border-right-color: cyan;
+     }
+```
+
+## 如何用css实现瀑布流布局
+
+利用 column 属性
+- column-count：指定列数
+- column-gap: 设置列之间的间距
+
+```vue
+<template>
+  <div class="waterfall-width-column">
+    <div class="image-box" v-for="img in imgList" :key="img">
+      <img :src="img" alt="" />
+    </div>
+  </div>
+</template>
+<style lang="scss" scoped>
+.waterfall-width-column {
+  column-count: 3;
+  column-gap: 10px;
+  .image-box {
+    img {
+      display: block;
+      width: 100%;
     }
+  }
+}
+</style>
 ```
