@@ -39,6 +39,7 @@ var convertToTitle = function (n) {
         n = parseInt(n / 26)
     }
     return res
+}
 ```
 
 **解说 ：** 从给出条件可以看出 26 一个循环，在 ASCII 中 A 对照为65，当循环一轮，如27，那么新的一轮位于初始第一个，所以n-- 才能对上 A ，即0=》65=》A。

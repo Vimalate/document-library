@@ -40,6 +40,7 @@
     * [167-两数之和](blog/LeetCode-Library/167-两数之和.md)
     * [168-Excel列表名称](blog/LeetCode-Library/168-Excel列表名称.md)
     * [169-求众数](blog/LeetCode-Library/169-求众数.md)
+    * [171-Excel表列序号](blog/LeetCode-Library/171-Excel表列序号.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
