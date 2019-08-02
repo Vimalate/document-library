@@ -190,4 +190,15 @@ function add(a,b) {
 }
 ```
 
+## 如何让：a == 1 && a == 2 && a == 3
+
+```js
+const a = {
+    value:[3,2,1],
+    valueOf:function(){
+        //隐式转换调用 valueOf ，pop()删除数组最后一个元素,改变原数组，返回被删除的元素.
+        return this.value.pop()
+    }
+}
+```
 
