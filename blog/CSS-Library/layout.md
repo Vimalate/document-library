@@ -266,6 +266,21 @@ html 同 3
      }
 ```
 
+## 画一个书签
+
+![](https://i.loli.net/2019/08/03/uhjOACltrQcdvaV.png)
+
+
+```css
+.bookmark {
+            width: 0;
+            height: 200px;
+            border-left: 50px solid #ccc;
+            border-right: 50px solid #ccc;
+            border-bottom: 40px solid transparent;
+        }
+```
+
 ## 如何用css实现瀑布流布局
 
 利用 column 属性
