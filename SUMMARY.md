@@ -43,6 +43,7 @@
     * [171-Excel表列序号](blog/LeetCode-Library/171-Excel表列序号.md)
     * [172-阶乘后的零](blog/LeetCode-Library/172-阶乘后的零.md)
     * [189-旋转数组](blog/LeetCode-Library/189-旋转数组.md)
+    * [190-颠倒二进制位](blog/LeetCode-Library/190-颠倒二进制位.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
