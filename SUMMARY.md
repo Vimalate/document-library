@@ -45,6 +45,7 @@
     * [189-旋转数组](blog/LeetCode-Library/189-旋转数组.md)
     * [190-颠倒二进制位](blog/LeetCode-Library/190-颠倒二进制位.md)
     * [191-位1的个数](blog/LeetCode-Library/191-位1的个数.md)
+    * [202-快乐数](blog/LeetCode-Library/202-快乐数.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
