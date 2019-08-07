@@ -1,5 +1,6 @@
 # vue 响应原理
 
+
 Vue.js的响应式原理依赖于[Object.defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)，Vue通过设定对象属性的 setter/getter 方法来监听数据的变化，通过getter进行依赖收集，而每个setter方法就是一个观察者，在数据变更的时候通知订阅者更新视图。
 
 
@@ -66,6 +67,16 @@ export class Observer {
 但是，每个 watcher 可以订阅很多作者，每个作者也都会更新文章。那么没有关注xxx的用户会收到提醒吗 ？不会，只给已经订阅了的用户发送提醒，而且只有江三疯更新了才提醒，你订阅的是xxx，可是站长更新了需要提醒你吗？当然不需要。这，也就是闭包需要做的事情。
 
 
+## 总结
+
+总结起来，Vue 的响应原理主要包括以下几个步骤
+具体步骤：
+
+- 第一步：需要 observe 的数据对象进行递归遍历，包括子属性对象的属性，都加上 setter 和 getter 这样的话，给这个对象的某个值赋值，就会触发 setter，那么就能监听到了数据变化
+  
+- 第二步：compile 解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图
+- 第三步：Watcher 订阅者是 Observer 和 Compile 之间通信的桥梁，主要做的事情是:在自身实例化时往属性订阅器(dep)里面添加自己自身必须有一个 update()方法待属性变动 dep.notice()通知时，能调用自身的 update() 方法，并触发 Compile 中绑定的回调，则功成身退。
+- 第四步：MVVM 作为数据绑定的入口，整合 Observer、Compile 和 Watcher 三者，通过 Observer 来监听自己的 model 数据变化，通过 Compile 来解析编译模板指令，最终利用 Watcher 搭起 Observer 和 Compile 之间的通信桥梁，达到数据变化 -> 视图更新；视图交互变化(input) -> 数据 model 变更的双向绑定效果。
 
 
 参考文档
