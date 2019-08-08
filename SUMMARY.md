@@ -47,6 +47,7 @@
     * [191-位1的个数](blog/LeetCode-Library/191-位1的个数.md)
     * [202-快乐数](blog/LeetCode-Library/202-快乐数.md)
     * [204-计数质数](blog/LeetCode-Library/204-计数质数.md)
+    * [205-同构字符串](blog/LeetCode-Library/205-同构字符串.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
