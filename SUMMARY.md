@@ -60,6 +60,7 @@
     * [能提高幸福感的一些技巧](blog/Other-Library/skill/index.md)
         * [skill](blog/Other-Library/skill/skill.md)
     * [Markdown 奇淫技巧](blog/Other-Library/markdown.md)
+    * [那些年，我们忘了的正则 ×](blog/那些年，我们忘了的正则 ×.md)
 
 
 * [随笔杂谈](blog/essay/index.md)
