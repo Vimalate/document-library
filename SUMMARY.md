@@ -52,6 +52,7 @@
     * [217-存在重复元素](blog/LeetCode-Library/217-存在重复元素.md)
     * [219-存在重复元素2](blog/LeetCode-Library/219-存在重复元素2.md)
     * [226-反转二叉树 ×](blog/LeetCode-Library/226-反转二叉树 ×.md)
+    * [231-2-的幂](blog/LeetCode-Library/231-2-的幂.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
