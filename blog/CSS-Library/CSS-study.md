@@ -42,3 +42,14 @@ img {
     height: 100%;
 }
 ```
+## 设置 平行 rem 布局
+
+```scss
+scss 文件
+$ratio: 375 / 10;
+
+@function px2rem($px) {
+  @return $px / $ratio + rem;
+}
+```
+然后所需要使用 px2rem() 的文件引入即可

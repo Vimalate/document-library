@@ -53,3 +53,12 @@ function parseURL(url) {
 
 ```
 
+## Vue 路由懒加载方法简易封装
+
+```js
+    /**
+    *@parma {String} name 文件夹名称
+    *@parma {String} component 视图组件名称
+    */
+    const getComponent = (name,component) => () => import(`@/views/${name}/${component}.vue`);
+```
