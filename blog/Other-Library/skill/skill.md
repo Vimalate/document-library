@@ -62,3 +62,11 @@ function parseURL(url) {
     */
     const getComponent = (name,component) => () => import(`@/views/${name}/${component}.vue`);
 ```
+
+## Vue 里有用的招
+
+在组件中有 input 时
+
+v-model.trim ：自动过滤用户输入的首尾空白字符
+
+和 v-model.number ：自动将用户的输入值转为数值类型
