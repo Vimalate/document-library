@@ -54,6 +54,7 @@
     * [226-反转二叉树 ×](blog/LeetCode-Library/226-反转二叉树 ×.md)
     * [231-2-的幂](blog/LeetCode-Library/231-2-的幂.md)
     * [234-回文链表](blog/LeetCode-Library/234-回文链表.md)
+    * [242-有效的字母异位词](blog/LeetCode-Library/242-有效的字母异位词.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
