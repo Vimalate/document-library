@@ -26,3 +26,11 @@ src 时指向外部的资源位置，指向的内容将会嵌入到文档中当�
 - **localStorage** ：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据
 
 **不同 ：sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localstorage在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的**
+
+## 用一个div模拟textarea的实现
+
+`textarea` 经常的被我们用来作为文本域功能，但他有一个不足就是不能像普通div标签一样高度可以跟随内容自适应，那么这时我们可以用 div 来进行实现。
+
+使用很简单，一个普通的block元素上加个contenteditable="true"就ok了
+
+`<div contenteditable="true"></div>`
