@@ -57,6 +57,7 @@
     * [242-有效的字母异位词](blog/LeetCode-Library/242-有效的字母异位词.md)
     * [258-各位相加](blog/LeetCode-Library/258-各位相加.md)
     * [263-丑数](blog/LeetCode-Library/263-丑数.md)
+    * [268-缺失的数字md](blog/LeetCode-Library/268-缺失的数字md.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
