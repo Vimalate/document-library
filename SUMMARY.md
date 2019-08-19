@@ -58,6 +58,7 @@
     * [258-各位相加](blog/LeetCode-Library/258-各位相加.md)
     * [263-丑数](blog/LeetCode-Library/263-丑数.md)
     * [268-缺失的数字md](blog/LeetCode-Library/268-缺失的数字md.md)
+    * [278-第一个错误版本](blog/LeetCode-Library/278-第一个错误版本.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
