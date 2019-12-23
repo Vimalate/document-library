@@ -57,9 +57,10 @@
     * [242-有效的字母异位词](blog/LeetCode-Library/242-有效的字母异位词.md)
     * [258-各位相加](blog/LeetCode-Library/258-各位相加.md)
     * [263-丑数](blog/LeetCode-Library/263-丑数.md)
-    * [268-缺失的数字md](blog/LeetCode-Library/268-缺失的数字md.md)
+    * [268-缺失的数字](blog/LeetCode-Library/268-缺失的数字.md)
     * [278-第一个错误版本](blog/LeetCode-Library/278-第一个错误版本.md)
     * [283-移动0](blog/LeetCode-Library/283-移动0.md)
+    * [290-单词规律](blog/LeetCode-Library/290-单词规律.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
