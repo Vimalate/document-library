@@ -12,8 +12,12 @@
 
 发生过的，就是生活唯一可能性，所以你可能后悔，但无从来一说。
 
+
+
 vscode sync token： 21a3dd2df5abdca3243df60ec19627f4b12c52d8
 
 github gist：5ccc35bb1c6280c8bdfc9eb64d8644a2
 
-github token：5bfb72fe8d4fca35ad83ef1850c452f152efb7c2
+github token：fa80d949adb7f1954402f6471c12e167a0d8634c
+
+
