@@ -64,6 +64,7 @@
     * [292-NIm游戏](blog/LeetCode-Library/292-NIm游戏.md)
     * [303-区域和检索-数组不可变](blog/LeetCode-Library/303-区域和检索 - 数组不可变.md)
     * [326-3的幂](blog/LeetCode-Library/326-3的幂.md)
+    * [342-4的幂](blog/LeetCode-Library/342-4的幂.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
