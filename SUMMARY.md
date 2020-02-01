@@ -66,6 +66,7 @@
     * [326-3的幂](blog/LeetCode-Library/326-3的幂.md)
     * [342-4的幂](blog/LeetCode-Library/342-4的幂.md)
     * [344-反转字符串](blog/LeetCode-Library/344-反转字符串.md)
+    * [349-两个数组的交集](blog/LeetCode-Library/349-两个数组的交集.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
