@@ -85,6 +85,7 @@
         * [从 URL 输入到页面展现](blog/Other-Library/HTTP.md)
     * [能提高幸福感的一些技巧](blog/Other-Library/skill/index.md)
         * [skill](blog/Other-Library/skill/skill.md)
+    * [前端模块化](blog/Other-Library/前端模块化：CommonJS,AMD,CMD,ES6.md)
     * [Markdown 奇淫技巧](blog/Other-Library/markdown.md)
     * [那些年，我们忘了的正则 ×](blog/Other-Library/那些年，我们忘了的正则 ×.md)
 
