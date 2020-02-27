@@ -1,0 +1,1352 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>303-区域和检索-数组不可变 · Vimalakirti 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="vimalakirti">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="326-3的幂.html" />
+    
+    
+    <link rel="prev" href="292-NIm游戏.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Vimalate","repo":"document-library","type":"star","count":true,"size":"small"},{"user":"Vimalate","width":"160","type":"follow","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../HTML-Library/">
+            
+                <a href="../HTML-Library/">
+            
+                    
+                    HTML 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../HTML-Library/HTML-Study.html">
+            
+                <a href="../HTML-Library/HTML-Study.html">
+            
+                    
+                    HTML常备基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../CSS-Library/">
+            
+                <a href="../CSS-Library/">
+            
+                    
+                    CSS 速查
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../CSS-Library/layout.html">
+            
+                <a href="../CSS-Library/layout.html">
+            
+                    
+                    CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../CSS-Library/我都知道的CSS.html">
+            
+                <a href="../CSS-Library/我都知道的CSS.html">
+            
+                    
+                    我都知道的CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../CSS-Library/CSS-study.html">
+            
+                <a href="../CSS-Library/CSS-study.html">
+            
+                    
+                    CSS问答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Javascript-Library/">
+            
+                <a href="../Javascript-Library/">
+            
+                    
+                    Javascript 文档库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../Javascript-Library/聊聊原型和原型链.html">
+            
+                <a href="../Javascript-Library/聊聊原型和原型链.html">
+            
+                    
+                    聊聊原型和原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../Javascript-Library/new.html">
+            
+                <a href="../Javascript-Library/new.html">
+            
+                    
+                    new 实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../Javascript-Library/js存储和垃圾回收.html">
+            
+                <a href="../Javascript-Library/js存储和垃圾回收.html">
+            
+                    
+                    js存储和垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../Javascript-Library/我都知道的js.html">
+            
+                <a href="../Javascript-Library/我都知道的js.html">
+            
+                    
+                    我都知道的js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../VUE-Library/">
+            
+                <a href="../VUE-Library/">
+            
+                    
+                    Vue 文档库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../VUE-Library/vuex.html">
+            
+                <a href="../VUE-Library/vuex.html">
+            
+                    
+                    vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../VUE-Library/vue响应原理.html">
+            
+                <a href="../VUE-Library/vue响应原理.html">
+            
+                    
+                    vue响应原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../VUE-Library/vue 123.html">
+            
+                <a href="../VUE-Library/vue 123.html">
+            
+                    
+                    vue123
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    力扣 LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="121-买卖股票最佳时机.html">
+            
+                <a href="121-买卖股票最佳时机.html">
+            
+                    
+                    121-买卖股票最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="122-买卖股票最佳时机2.html">
+            
+                <a href="122-买卖股票最佳时机2.html">
+            
+                    
+                    122-买卖股票最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="123-验证回文串.html">
+            
+                <a href="123-验证回文串.html">
+            
+                    
+                    123-验证回文串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="136-只出现一次的数字.html">
+            
+                <a href="136-只出现一次的数字.html">
+            
+                    
+                    136-只出现一次的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="156-最小栈.html">
+            
+                <a href="156-最小栈.html">
+            
+                    
+                    156-最小栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="167-两数之和.html">
+            
+                <a href="167-两数之和.html">
+            
+                    
+                    167-两数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="168-Excel列表名称.md">
+            
+                <span>
+            
+                    
+                    168-Excel列表名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.8" data-path="169-求众数.html">
+            
+                <a href="169-求众数.html">
+            
+                    
+                    169-求众数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.9" data-path="171-Excel表列序号.html">
+            
+                <a href="171-Excel表列序号.html">
+            
+                    
+                    171-Excel表列序号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.10" data-path="172-阶乘后的零.html">
+            
+                <a href="172-阶乘后的零.html">
+            
+                    
+                    172-阶乘后的零
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.11" data-path="189-旋转数组.html">
+            
+                <a href="189-旋转数组.html">
+            
+                    
+                    189-旋转数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.12" data-path="190-颠倒二进制位.html">
+            
+                <a href="190-颠倒二进制位.html">
+            
+                    
+                    190-颠倒二进制位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.13" data-path="191-位1的个数.html">
+            
+                <a href="191-位1的个数.html">
+            
+                    
+                    191-位1的个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.14" data-path="202-快乐数.html">
+            
+                <a href="202-快乐数.html">
+            
+                    
+                    202-快乐数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.15" data-path="204-计数质数.html">
+            
+                <a href="204-计数质数.html">
+            
+                    
+                    204-计数质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.16" data-path="205-同构字符串.html">
+            
+                <a href="205-同构字符串.html">
+            
+                    
+                    205-同构字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.17" data-path="206-反转链表 ×.html">
+            
+                <a href="206-反转链表 ×.html">
+            
+                    
+                    206-反转链表 ×
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.18" data-path="217-存在重复元素.html">
+            
+                <a href="217-存在重复元素.html">
+            
+                    
+                    217-存在重复元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.19" data-path="219-存在重复元素2.md">
+            
+                <span>
+            
+                    
+                    219-存在重复元素2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.20" data-path="226-反转二叉树 ×.html">
+            
+                <a href="226-反转二叉树 ×.html">
+            
+                    
+                    226-反转二叉树 ×
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.21" data-path="231-2-的幂.html">
+            
+                <a href="231-2-的幂.html">
+            
+                    
+                    231-2-的幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.22" data-path="234-回文链表.html">
+            
+                <a href="234-回文链表.html">
+            
+                    
+                    234-回文链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.23" data-path="242-有效的字母异位词.html">
+            
+                <a href="242-有效的字母异位词.html">
+            
+                    
+                    242-有效的字母异位词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.24" data-path="258-各位相加.html">
+            
+                <a href="258-各位相加.html">
+            
+                    
+                    258-各位相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.25" data-path="263-丑数.html">
+            
+                <a href="263-丑数.html">
+            
+                    
+                    263-丑数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.26" data-path="268-缺失的数字.html">
+            
+                <a href="268-缺失的数字.html">
+            
+                    
+                    268-缺失的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.27" data-path="278-第一个错误版本.html">
+            
+                <a href="278-第一个错误版本.html">
+            
+                    
+                    278-第一个错误版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.28" data-path="283-移动0.html">
+            
+                <a href="283-移动0.html">
+            
+                    
+                    283-移动0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.29" data-path="290-单词规律.html">
+            
+                <a href="290-单词规律.html">
+            
+                    
+                    290-单词规律
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.30" data-path="292-NIm游戏.html">
+            
+                <a href="292-NIm游戏.html">
+            
+                    
+                    292-NIm游戏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.1.31" data-path="303-区域和检索 - 数组不可变.html">
+            
+                <a href="303-区域和检索 - 数组不可变.html">
+            
+                    
+                    303-区域和检索-数组不可变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.32" data-path="326-3的幂.html">
+            
+                <a href="326-3的幂.html">
+            
+                    
+                    326-3的幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.33" data-path="342-4的幂.html">
+            
+                <a href="342-4的幂.html">
+            
+                    
+                    342-4的幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.34" data-path="344-反转字符串.html">
+            
+                <a href="344-反转字符串.html">
+            
+                    
+                    344-反转字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.35" data-path="349-两个数组的交集.html">
+            
+                <a href="349-两个数组的交集.html">
+            
+                    
+                    349-两个数组的交集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.36" data-path="350-两个数组的交集 II.html">
+            
+                <a href="350-两个数组的交集 II.html">
+            
+                    
+                    350-两个数组的交集-II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.37" data-path="367-有效的完全平方数.html">
+            
+                <a href="367-有效的完全平方数.html">
+            
+                    
+                    367-有效的完全平方数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.38" data-path="383-赎金信.html">
+            
+                <a href="383-赎金信.html">
+            
+                    
+                    383-赎金信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.39" data-path="387-字符串中的第一个唯一字符.html">
+            
+                <a href="387-字符串中的第一个唯一字符.html">
+            
+                    
+                    387-字符串中的第一个唯一字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.40" data-path="389-找不同.html">
+            
+                <a href="389-找不同.html">
+            
+                    
+                    389-找不同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.41" data-path="409-最长回文串.html">
+            
+                <a href="409-最长回文串.html">
+            
+                    
+                    409-最长回文串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.42" data-path="412-FizzBuzz.html">
+            
+                <a href="412-FizzBuzz.html">
+            
+                    
+                    412-FizzBuzz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.43" data-path="413-第三大的数.html">
+            
+                <a href="413-第三大的数.html">
+            
+                    
+                    413-第三大的数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.44" data-path="434-字符串中的单词数.html">
+            
+                <a href="434-字符串中的单词数.html">
+            
+                    
+                    434-字符串中的单词数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Other-Library/">
+            
+                <a href="../Other-Library/">
+            
+                    
+                    其他文档库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../Other-Library/Git Document Library/">
+            
+                <a href="../Other-Library/Git Document Library/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1.1" data-path="../Other-Library/Git Document Library/gitbook.html">
+            
+                <a href="../Other-Library/Git Document Library/gitbook.html">
+            
+                    
+                    gitbook serve问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../Other-Library/">
+            
+                <a href="../Other-Library/">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.2.1" data-path="../Other-Library/HTTP.html">
+            
+                <a href="../Other-Library/HTTP.html">
+            
+                    
+                    从 URL 输入到页面展现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../Other-Library/skill/">
+            
+                <a href="../Other-Library/skill/">
+            
+                    
+                    能提高幸福感的一些技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.3.1" data-path="../Other-Library/skill/skill.html">
+            
+                <a href="../Other-Library/skill/skill.html">
+            
+                    
+                    skill
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../Other-Library/前端模块化：CommonJS,AMD,CMD,ES6.html">
+            
+                <a href="../Other-Library/前端模块化：CommonJS,AMD,CMD,ES6.html">
+            
+                    
+                    前端模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="../Other-Library/markdown.html">
+            
+                <a href="../Other-Library/markdown.html">
+            
+                    
+                    Markdown 奇淫技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="../Other-Library/那些年，我们忘了的正则 ×.html">
+            
+                <a href="../Other-Library/那些年，我们忘了的正则 ×.html">
+            
+                    
+                    那些年，我们忘了的正则 ×
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../essay/">
+            
+                <a href="../essay/">
+            
+                    
+                    随笔杂谈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../essay/one.html">
+            
+                <a href="../essay/one.html">
+            
+                    
+                    one
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >303-区域和检索-数组不可变</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x539F;&#x9898;"><b></b>&#x539F;&#x9898;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;-&#xFF1A;"><b></b>&#x89E3; &#xFF1A;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x539F;&#x9898;"><a name="&#x539F;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x9898;</h2>
+<pre class="language-"><code>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4;  nums&#xFF0C;&#x6C42;&#x51FA;&#x6570;&#x7EC4;&#x4ECE;&#x7D22;&#x5F15; i &#x5230; j  (i &#x2264; j) &#x8303;&#x56F4;&#x5185;&#x5143;&#x7D20;&#x7684;&#x603B;&#x548C;&#xFF0C;&#x5305;&#x542B; i,  j &#x4E24;&#x70B9;&#x3002;
+
+&#x793A;&#x4F8B;&#xFF1A;
+
+&#x7ED9;&#x5B9A; nums = [-2, 0, 3, -5, 2, -1]&#xFF0C;&#x6C42;&#x548C;&#x51FD;&#x6570;&#x4E3A; sumRange()
+
+sumRange(0, 2) -&gt; 1
+sumRange(2, 5) -&gt; -1
+sumRange(0, 5) -&gt; -3
+&#x8BF4;&#x660E;:
+
+&#x4F60;&#x53EF;&#x4EE5;&#x5047;&#x8BBE;&#x6570;&#x7EC4;&#x4E0D;&#x53EF;&#x53D8;&#x3002;
+&#x4F1A;&#x591A;&#x6B21;&#x8C03;&#x7528; sumRange &#x65B9;&#x6CD5;&#x3002;
+</code></pre><h2 id="&#x89E3;-&#xFF1A;"><a name="&#x89E3;-&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x89E3;-&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3; &#xFF1A;</h2>
+<pre class="language-"><code class="lang-js"><span class="token keyword">var</span> <span class="token function-variable function">NumArray</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nums <span class="token operator">=</span> nums
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">/** 
+ * @param {number} i 
+ * @param {number} j
+ * @return {number}
+ */</span>
+<span class="token class-name">NumArray</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sumRange</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> j</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> z <span class="token operator">=</span> i<span class="token punctuation">;</span> z <span class="token operator">&lt;=</span> j<span class="token punctuation">;</span> z<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        sum <span class="token operator">+=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>nums<span class="token punctuation">[</span>z<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> sum
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; vimalakirti.fun 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-12-26 18:00:02
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="292-NIm游戏.html" class="navigation navigation-prev " aria-label="Previous page: 292-NIm游戏">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="326-3的幂.html" class="navigation navigation-next " aria-label="Next page: 326-3的幂">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"303-区域和检索-数组不可变","level":"6.1.31","depth":2,"next":{"title":"326-3的幂","level":"6.1.32","depth":2,"path":"blog/LeetCode-Library/326-3的幂.md","ref":"blog/LeetCode-Library/326-3的幂.md","articles":[]},"previous":{"title":"292-NIm游戏","level":"6.1.30","depth":2,"path":"blog/LeetCode-Library/292-NIm游戏.md","ref":"blog/LeetCode-Library/292-NIm游戏.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","donate","tbfed-pagefooter","baidu-tongji","anchor-navigation-ex"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy vimalakirti.fun 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://i.loli.net/2019/08/05/N1VSJp7ODEzxmGo.jpg","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://i.loli.net/2019/08/05/3Lpg9kdaolcFIi4.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"Vimalate","repo":"document-library","type":"star","count":true,"size":"small"},{"user":"Vimalate","width":"160","type":"follow","count":false,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"vimalakirti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vimalakirti 的文档库","language":"zh-hans","gitbook":"*","description":"vimalakirti 的文档库. 里面包含了个人撰写的所有前端文章，例如 Vue、React,、ECharts、微信小程序等……"},"file":{"path":"blog/LeetCode-Library/303-区域和检索 - 数组不可变.md","mtime":"2019-12-26T10:00:02.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-27T13:21:18.296Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

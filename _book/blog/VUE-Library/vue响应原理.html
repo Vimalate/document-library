@@ -1,0 +1,1385 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>vue响应原理 · Vimalakirti 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="vimalakirti">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vue 123.html" />
+    
+    
+    <link rel="prev" href="vuex.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Vimalate","repo":"document-library","type":"star","count":true,"size":"small"},{"user":"Vimalate","width":"160","type":"follow","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../HTML-Library/">
+            
+                <a href="../HTML-Library/">
+            
+                    
+                    HTML 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../HTML-Library/HTML-Study.html">
+            
+                <a href="../HTML-Library/HTML-Study.html">
+            
+                    
+                    HTML常备基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../CSS-Library/">
+            
+                <a href="../CSS-Library/">
+            
+                    
+                    CSS 速查
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../CSS-Library/layout.html">
+            
+                <a href="../CSS-Library/layout.html">
+            
+                    
+                    CSS布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../CSS-Library/我都知道的CSS.html">
+            
+                <a href="../CSS-Library/我都知道的CSS.html">
+            
+                    
+                    我都知道的CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../CSS-Library/CSS-study.html">
+            
+                <a href="../CSS-Library/CSS-study.html">
+            
+                    
+                    CSS问答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Javascript-Library/">
+            
+                <a href="../Javascript-Library/">
+            
+                    
+                    Javascript 文档库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../Javascript-Library/聊聊原型和原型链.html">
+            
+                <a href="../Javascript-Library/聊聊原型和原型链.html">
+            
+                    
+                    聊聊原型和原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../Javascript-Library/new.html">
+            
+                <a href="../Javascript-Library/new.html">
+            
+                    
+                    new 实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../Javascript-Library/js存储和垃圾回收.html">
+            
+                <a href="../Javascript-Library/js存储和垃圾回收.html">
+            
+                    
+                    js存储和垃圾回收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../Javascript-Library/我都知道的js.html">
+            
+                <a href="../Javascript-Library/我都知道的js.html">
+            
+                    
+                    我都知道的js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Vue 文档库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="vuex.html">
+            
+                <a href="vuex.html">
+            
+                    
+                    vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.1.2" data-path="vue响应原理.html">
+            
+                <a href="vue响应原理.html">
+            
+                    
+                    vue响应原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="vue 123.html">
+            
+                <a href="vue 123.html">
+            
+                    
+                    vue123
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../LeetCode-Library/">
+            
+                <a href="../LeetCode-Library/">
+            
+                    
+                    力扣 LeetCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../LeetCode-Library/121-买卖股票最佳时机.html">
+            
+                <a href="../LeetCode-Library/121-买卖股票最佳时机.html">
+            
+                    
+                    121-买卖股票最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../LeetCode-Library/122-买卖股票最佳时机2.html">
+            
+                <a href="../LeetCode-Library/122-买卖股票最佳时机2.html">
+            
+                    
+                    122-买卖股票最佳时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../LeetCode-Library/123-验证回文串.html">
+            
+                <a href="../LeetCode-Library/123-验证回文串.html">
+            
+                    
+                    123-验证回文串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../LeetCode-Library/136-只出现一次的数字.html">
+            
+                <a href="../LeetCode-Library/136-只出现一次的数字.html">
+            
+                    
+                    136-只出现一次的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../LeetCode-Library/156-最小栈.html">
+            
+                <a href="../LeetCode-Library/156-最小栈.html">
+            
+                    
+                    156-最小栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="../LeetCode-Library/167-两数之和.html">
+            
+                <a href="../LeetCode-Library/167-两数之和.html">
+            
+                    
+                    167-两数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="../LeetCode-Library/168-Excel列表名称.md">
+            
+                <span>
+            
+                    
+                    168-Excel列表名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.8" data-path="../LeetCode-Library/169-求众数.html">
+            
+                <a href="../LeetCode-Library/169-求众数.html">
+            
+                    
+                    169-求众数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.9" data-path="../LeetCode-Library/171-Excel表列序号.html">
+            
+                <a href="../LeetCode-Library/171-Excel表列序号.html">
+            
+                    
+                    171-Excel表列序号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.10" data-path="../LeetCode-Library/172-阶乘后的零.html">
+            
+                <a href="../LeetCode-Library/172-阶乘后的零.html">
+            
+                    
+                    172-阶乘后的零
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.11" data-path="../LeetCode-Library/189-旋转数组.html">
+            
+                <a href="../LeetCode-Library/189-旋转数组.html">
+            
+                    
+                    189-旋转数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.12" data-path="../LeetCode-Library/190-颠倒二进制位.html">
+            
+                <a href="../LeetCode-Library/190-颠倒二进制位.html">
+            
+                    
+                    190-颠倒二进制位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.13" data-path="../LeetCode-Library/191-位1的个数.html">
+            
+                <a href="../LeetCode-Library/191-位1的个数.html">
+            
+                    
+                    191-位1的个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.14" data-path="../LeetCode-Library/202-快乐数.html">
+            
+                <a href="../LeetCode-Library/202-快乐数.html">
+            
+                    
+                    202-快乐数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.15" data-path="../LeetCode-Library/204-计数质数.html">
+            
+                <a href="../LeetCode-Library/204-计数质数.html">
+            
+                    
+                    204-计数质数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.16" data-path="../LeetCode-Library/205-同构字符串.html">
+            
+                <a href="../LeetCode-Library/205-同构字符串.html">
+            
+                    
+                    205-同构字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.17" data-path="../LeetCode-Library/206-反转链表 ×.html">
+            
+                <a href="../LeetCode-Library/206-反转链表 ×.html">
+            
+                    
+                    206-反转链表 ×
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.18" data-path="../LeetCode-Library/217-存在重复元素.html">
+            
+                <a href="../LeetCode-Library/217-存在重复元素.html">
+            
+                    
+                    217-存在重复元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.19" data-path="../LeetCode-Library/219-存在重复元素2.md">
+            
+                <span>
+            
+                    
+                    219-存在重复元素2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.20" data-path="../LeetCode-Library/226-反转二叉树 ×.html">
+            
+                <a href="../LeetCode-Library/226-反转二叉树 ×.html">
+            
+                    
+                    226-反转二叉树 ×
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.21" data-path="../LeetCode-Library/231-2-的幂.html">
+            
+                <a href="../LeetCode-Library/231-2-的幂.html">
+            
+                    
+                    231-2-的幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.22" data-path="../LeetCode-Library/234-回文链表.html">
+            
+                <a href="../LeetCode-Library/234-回文链表.html">
+            
+                    
+                    234-回文链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.23" data-path="../LeetCode-Library/242-有效的字母异位词.html">
+            
+                <a href="../LeetCode-Library/242-有效的字母异位词.html">
+            
+                    
+                    242-有效的字母异位词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.24" data-path="../LeetCode-Library/258-各位相加.html">
+            
+                <a href="../LeetCode-Library/258-各位相加.html">
+            
+                    
+                    258-各位相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.25" data-path="../LeetCode-Library/263-丑数.html">
+            
+                <a href="../LeetCode-Library/263-丑数.html">
+            
+                    
+                    263-丑数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.26" data-path="../LeetCode-Library/268-缺失的数字.html">
+            
+                <a href="../LeetCode-Library/268-缺失的数字.html">
+            
+                    
+                    268-缺失的数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.27" data-path="../LeetCode-Library/278-第一个错误版本.html">
+            
+                <a href="../LeetCode-Library/278-第一个错误版本.html">
+            
+                    
+                    278-第一个错误版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.28" data-path="../LeetCode-Library/283-移动0.html">
+            
+                <a href="../LeetCode-Library/283-移动0.html">
+            
+                    
+                    283-移动0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.29" data-path="../LeetCode-Library/290-单词规律.html">
+            
+                <a href="../LeetCode-Library/290-单词规律.html">
+            
+                    
+                    290-单词规律
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.30" data-path="../LeetCode-Library/292-NIm游戏.html">
+            
+                <a href="../LeetCode-Library/292-NIm游戏.html">
+            
+                    
+                    292-NIm游戏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.31" data-path="../LeetCode-Library/303-区域和检索 - 数组不可变.html">
+            
+                <a href="../LeetCode-Library/303-区域和检索 - 数组不可变.html">
+            
+                    
+                    303-区域和检索-数组不可变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.32" data-path="../LeetCode-Library/326-3的幂.html">
+            
+                <a href="../LeetCode-Library/326-3的幂.html">
+            
+                    
+                    326-3的幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.33" data-path="../LeetCode-Library/342-4的幂.html">
+            
+                <a href="../LeetCode-Library/342-4的幂.html">
+            
+                    
+                    342-4的幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.34" data-path="../LeetCode-Library/344-反转字符串.html">
+            
+                <a href="../LeetCode-Library/344-反转字符串.html">
+            
+                    
+                    344-反转字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.35" data-path="../LeetCode-Library/349-两个数组的交集.html">
+            
+                <a href="../LeetCode-Library/349-两个数组的交集.html">
+            
+                    
+                    349-两个数组的交集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.36" data-path="../LeetCode-Library/350-两个数组的交集 II.html">
+            
+                <a href="../LeetCode-Library/350-两个数组的交集 II.html">
+            
+                    
+                    350-两个数组的交集-II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.37" data-path="../LeetCode-Library/367-有效的完全平方数.html">
+            
+                <a href="../LeetCode-Library/367-有效的完全平方数.html">
+            
+                    
+                    367-有效的完全平方数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.38" data-path="../LeetCode-Library/383-赎金信.html">
+            
+                <a href="../LeetCode-Library/383-赎金信.html">
+            
+                    
+                    383-赎金信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.39" data-path="../LeetCode-Library/387-字符串中的第一个唯一字符.html">
+            
+                <a href="../LeetCode-Library/387-字符串中的第一个唯一字符.html">
+            
+                    
+                    387-字符串中的第一个唯一字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.40" data-path="../LeetCode-Library/389-找不同.html">
+            
+                <a href="../LeetCode-Library/389-找不同.html">
+            
+                    
+                    389-找不同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.41" data-path="../LeetCode-Library/409-最长回文串.html">
+            
+                <a href="../LeetCode-Library/409-最长回文串.html">
+            
+                    
+                    409-最长回文串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.42" data-path="../LeetCode-Library/412-FizzBuzz.html">
+            
+                <a href="../LeetCode-Library/412-FizzBuzz.html">
+            
+                    
+                    412-FizzBuzz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.43" data-path="../LeetCode-Library/413-第三大的数.html">
+            
+                <a href="../LeetCode-Library/413-第三大的数.html">
+            
+                    
+                    413-第三大的数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.44" data-path="../LeetCode-Library/434-字符串中的单词数.html">
+            
+                <a href="../LeetCode-Library/434-字符串中的单词数.html">
+            
+                    
+                    434-字符串中的单词数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../Other-Library/">
+            
+                <a href="../Other-Library/">
+            
+                    
+                    其他文档库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../Other-Library/Git Document Library/">
+            
+                <a href="../Other-Library/Git Document Library/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1.1" data-path="../Other-Library/Git Document Library/gitbook.html">
+            
+                <a href="../Other-Library/Git Document Library/gitbook.html">
+            
+                    
+                    gitbook serve问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../Other-Library/">
+            
+                <a href="../Other-Library/">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.2.1" data-path="../Other-Library/HTTP.html">
+            
+                <a href="../Other-Library/HTTP.html">
+            
+                    
+                    从 URL 输入到页面展现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../Other-Library/skill/">
+            
+                <a href="../Other-Library/skill/">
+            
+                    
+                    能提高幸福感的一些技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.3.1" data-path="../Other-Library/skill/skill.html">
+            
+                <a href="../Other-Library/skill/skill.html">
+            
+                    
+                    skill
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../Other-Library/前端模块化：CommonJS,AMD,CMD,ES6.html">
+            
+                <a href="../Other-Library/前端模块化：CommonJS,AMD,CMD,ES6.html">
+            
+                    
+                    前端模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="../Other-Library/markdown.html">
+            
+                <a href="../Other-Library/markdown.html">
+            
+                    
+                    Markdown 奇淫技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="../Other-Library/那些年，我们忘了的正则 ×.html">
+            
+                <a href="../Other-Library/那些年，我们忘了的正则 ×.html">
+            
+                    
+                    那些年，我们忘了的正则 ×
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../essay/">
+            
+                <a href="../essay/">
+            
+                    
+                    随笔杂谈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../essay/one.html">
+            
+                <a href="../essay/one.html">
+            
+                    
+                    one
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >vue响应原理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vue-&#x54CD;&#x5E94;&#x539F;&#x7406;"><b></b>vue &#x54CD;&#x5E94;&#x539F;&#x7406;</a></li><ul><ul><li><span class="title-icon "></span><a href="#initdata-&#x65B9;&#x6CD5;"><b></b>initData &#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x52AB;&#x6301;-&#x2014;-observe"><b></b>&#x6570;&#x636E;&#x52AB;&#x6301; &#x2014; Observe</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b></b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#vue-&#x54CD;&#x5E94;&#x539F;&#x7406;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vue-&#x54CD;&#x5E94;&#x539F;&#x7406;"><a name="vue-&#x54CD;&#x5E94;&#x539F;&#x7406;" class="anchor-navigation-ex-anchor" href="#vue-&#x54CD;&#x5E94;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>vue &#x54CD;&#x5E94;&#x539F;&#x7406;</h1>
+<p>Vue.js&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x539F;&#x7406;&#x4F9D;&#x8D56;&#x4E8E;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank">Object.defineProperty</a>&#xFF0C;Vue&#x901A;&#x8FC7;&#x8BBE;&#x5B9A;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684; setter/getter &#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C;&#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x901A;&#x8FC7;getter&#x8FDB;&#x884C;&#x4F9D;&#x8D56;&#x6536;&#x96C6;&#xFF0C;&#x800C;&#x6BCF;&#x4E2A;setter&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x89C2;&#x5BDF;&#x8005;&#xFF0C;&#x5728;&#x6570;&#x636E;&#x53D8;&#x66F4;&#x7684;&#x65F6;&#x5019;&#x901A;&#x77E5;&#x8BA2;&#x9605;&#x8005;&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x3002;</p>
+<p><img src="https://i.loli.net/2019/07/24/5d37c17fe0a6b32226.jpg" alt="&#x6D41;&#x7A0B;&#x56FE;"></p>
+<h3 id="initdata-&#x65B9;&#x6CD5;"><a name="initdata-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#initdata-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>initData &#x65B9;&#x6CD5;</h3>
+<p>&#x5728; Vue &#x7684;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5176; <code>_init()</code> &#x65B9;&#x6CD5;&#x4F1A;&#x8C03;&#x7528;&#x6267;&#x884C; <code>initState(vm)</code> &#x65B9;&#x6CD5;&#x3002;<code>initState</code> &#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x662F;&#x5BF9; <code>props</code>&#x3001;<code>methods</code>&#x3001;<code>data</code>&#x3001;<code>computed</code> &#x548C; <code>wathcer</code> &#x7B49;&#x5C5E;&#x6027;&#x505A;&#x4E86;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>Vue &#x901A;&#x8FC7;&#x3010;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x3011;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x5957;&#x54CD;&#x5E94;&#x5F0F;&#x7CFB;&#x7EDF;&#x3002;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF08;&#x4E5F;&#x53EB;&#x53D1;&#x5E03;/&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#xFF09;&#x4F1A;&#x5C06;&#x89C2;&#x5BDF;&#x8005;&#x548C;&#x88AB;&#x89C2;&#x5BDF;&#x7684;&#x5BF9;&#x8C61;&#x4E25;&#x683C;&#x5206;&#x79BB;&#x5F00;&#xFF0C;&#x5F53;&#x88AB;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x7684;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x4E8E;&#x5B83;&#x7684;&#x89C2;&#x5BDF;&#x8005;&#x90FD;&#x5C06;&#x5F97;&#x5230;&#x901A;&#x77E5;&#x5E76;&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x3002;&#x4E3E;&#x4E2A;&#x6817;&#x5B50;&#xFF0C;&#x7528;&#x6237;&#x754C;&#x9762;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x89C2;&#x5BDF;&#x8005;&#xFF0C;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x662F;&#x88AB;&#x89C2;&#x5BDF;&#x8005;&#xFF0C;&#x7528;&#x6237;&#x754C;&#x9762;&#x89C2;&#x5BDF;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x754C;&#x9762;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x3002;</p>
+<h3 id="&#x6570;&#x636E;&#x52AB;&#x6301;-&#x2014;-observe"><a name="&#x6570;&#x636E;&#x52AB;&#x6301;-&#x2014;-observe" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x52AB;&#x6301;-&#x2014;-observe"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x52AB;&#x6301; &#x2014; <code>Observe</code></h3>
+<pre class="language-"><code>// &#x7ED9;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x6DFB;&#x52A0; getter &#x548C; setter&#xFF0C;&#x7528;&#x4E8E;&#x4F9D;&#x8D56;&#x6536;&#x96C6;&#x548C;&#x53D1;&#x5E03;&#x66F4;&#x65B0;
+export class Observer {
+  value: any;
+  dep: Dep;  
+  vmCount: number; 
+  constructor (value: any) {
+    this.value = value
+    // &#x5B9E;&#x4F8B;&#x5316; Dep &#x5BF9;&#x8C61;
+    this.dep = new Dep()
+    this.vmCount = 0
+    // &#x628A;&#x81EA;&#x8EAB;&#x5B9E;&#x4F8B;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x636E;&#x5BF9;&#x8C61; value &#x7684; __ob__ &#x5C5E;&#x6027;&#x4E0A;
+    def(value, &apos;__ob__&apos;, this)
+    // value &#x662F;&#x5426;&#x4E3A;&#x6570;&#x7EC4;&#x7684;&#x4E0D;&#x540C;&#x8C03;&#x7528;
+    if (Array.isArray(value)) {
+      const augment = hasProto ? protoAugment : copyAugment
+      augment(value, arrayMethods, arrayKeys)
+      this.observeArray(value)
+    } else {
+      this.walk(value)
+    }
+  }
+
+  // &#x53D6;&#x51FA;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x904D;&#x5386;
+  walk (obj: Object) {
+    const keys = Object.keys(obj)
+    for (let i = 0; i &lt; keys.length; i++) {
+      defineReactive(obj, keys[i])
+    }
+  }
+
+  observeArray (items: Array<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>any</span><span class="token punctuation">&gt;</span></span>) {
+    for (let i = 0, l = items.length; i &lt; l; i++) {
+      observe(items[i])
+    }
+  }
+}
+</code></pre><ol>
+<li><code>getter</code> &#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x4F9D;&#x8D56;&#x6536;&#x96C6; &#x2014;&#x2014; <code>dep.depend()</code></li>
+<li><code>setter</code> &#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x53D1;&#x5E03;&#x66F4;&#x65B0; &#x2014;&#x2014; <code>dep.notify()</code></li>
+</ol>
+<p><strong>&#x5C06;&#x6570;&#x636E;data&#x53D8;&#x6210;&#x53EF;&#x89C2;&#x5BDF;&#x7684;</strong></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5927;&#x6982;&#x603B;&#x7ED3;&#x4E00;&#x4E9B;&#x6574;&#x4E2A;&#x54CD;&#x5E94;&#x5F0F;&#x7CFB;&#x7EDF;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x5E38;&#x8BF4;&#x7684; <strong>&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;</strong>&#xFF1A;&#x7B2C;&#x4E00;&#x6B65;&#x5F53;&#x7136;&#x662F;&#x901A;&#x8FC7; observer &#x8FDB;&#x884C;&#x6570;&#x636E;&#x52AB;&#x6301;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x9700;&#x8981;&#x8BA2;&#x9605;&#x7684;&#x5730;&#x65B9;&#xFF08;&#x5982;&#xFF1A;&#x6A21;&#x7248;&#x7F16;&#x8BD1;&#xFF09;&#xFF0C;&#x6DFB;&#x52A0;&#x89C2;&#x5BDF;&#x8005;&#xFF08;watcher&#xFF09;&#xFF0C;&#x5E76;&#x7ACB;&#x523B;&#x901A;&#x8FC7;&#x53D6;&#x503C;&#x64CD;&#x4F5C;&#x89E6;&#x53D1;&#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x7684; getter &#x65B9;&#x6CD5;&#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x89C2;&#x5BDF;&#x8005;&#x6DFB;&#x52A0;&#x8FDB; Dep &#xFF08;&#x5229;&#x7528;&#x4E86;&#x95ED;&#x5305;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x8FDB;&#x884C;&#x4F9D;&#x8D56;&#x6536;&#x96C6;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x5728; Setter &#x89E6;&#x53D1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FDB;&#x884C; notify&#xFF0C;&#x901A;&#x77E5;&#x7ED9;&#x6240;&#x6709;&#x89C2;&#x5BDF;&#x8005;&#x5E76;&#x8FDB;&#x884C;&#x76F8;&#x5E94;&#x7684; update&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x7406;&#x89E3; <strong>&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;</strong>&#xFF1A;Dep &#x5C31;&#x597D;&#x6BD4;&#x662F;&#x6398;&#x91D1;&#xFF0C;&#x6398;&#x91D1;&#x6709;&#x5F88;&#x591A;&#x4F5C;&#x8005;&#xFF08;&#x76F8;&#x5F53;&#x4E8E; data &#x7684;&#x5F88;&#x591A;&#x5C5E;&#x6027;&#xFF09;&#x3002;&#x6211;&#x4EEC;&#x81EA;&#x7136;&#x90FD;&#x662F;&#x5145;&#x5F53;&#x8BA2;&#x9605;&#x8005;&#xFF08;watcher&#xFF09;&#x89D2;&#x8272;&#xFF0C;&#x5728;&#x6398;&#x91D1;&#xFF08;Dep&#xFF09;&#x8FD9;&#x91CC;&#x5173;&#x6CE8;&#x4E86;&#x6211;&#x4EEC;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x4F5C;&#x8005;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;xxx&#xFF0C;&#x544A;&#x8BC9;&#x5B83;xxx&#x66F4;&#x65B0;&#x4E86;&#x5C31;&#x63D0;&#x9192;&#x6211;&#x53BB;&#x770B;&#x3002;&#x90A3;&#x4E48;&#x6BCF;&#x5F53;&#x6C5F;&#x4E09;&#x75AF;&#x6709;&#x65B0;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x6536;&#x5230;&#x7C7B;&#x4F3C;&#x8FD9;&#x6837;&#x7684;&#x63D0;&#x9192;&#xFF1A;<code>xxx&#x53D1;&#x5E03;&#x4E86;&#x3010;2019 &#x524D;&#x7AEF;&#x8FDB;&#x9636;&#x4E4B;&#x8DEF; ***&#x3011;</code>&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x53BB;&#x770B;&#x4E86;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x6BCF;&#x4E2A; watcher &#x53EF;&#x4EE5;&#x8BA2;&#x9605;&#x5F88;&#x591A;&#x4F5C;&#x8005;&#xFF0C;&#x6BCF;&#x4E2A;&#x4F5C;&#x8005;&#x4E5F;&#x90FD;&#x4F1A;&#x66F4;&#x65B0;&#x6587;&#x7AE0;&#x3002;&#x90A3;&#x4E48;&#x6CA1;&#x6709;&#x5173;&#x6CE8;xxx&#x7684;&#x7528;&#x6237;&#x4F1A;&#x6536;&#x5230;&#x63D0;&#x9192;&#x5417; &#xFF1F;&#x4E0D;&#x4F1A;&#xFF0C;&#x53EA;&#x7ED9;&#x5DF2;&#x7ECF;&#x8BA2;&#x9605;&#x4E86;&#x7684;&#x7528;&#x6237;&#x53D1;&#x9001;&#x63D0;&#x9192;&#xFF0C;&#x800C;&#x4E14;&#x53EA;&#x6709;&#x6C5F;&#x4E09;&#x75AF;&#x66F4;&#x65B0;&#x4E86;&#x624D;&#x63D0;&#x9192;&#xFF0C;&#x4F60;&#x8BA2;&#x9605;&#x7684;&#x662F;xxx&#xFF0C;&#x53EF;&#x662F;&#x7AD9;&#x957F;&#x66F4;&#x65B0;&#x4E86;&#x9700;&#x8981;&#x63D0;&#x9192;&#x4F60;&#x5417;&#xFF1F;&#x5F53;&#x7136;&#x4E0D;&#x9700;&#x8981;&#x3002;&#x8FD9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x95ED;&#x5305;&#x9700;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h2>
+<p>&#x603B;&#x7ED3;&#x8D77;&#x6765;&#xFF0C;Vue &#x7684;&#x54CD;&#x5E94;&#x539F;&#x7406;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;
+&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ul>
+<li><p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x9700;&#x8981; observe &#x7684;&#x6570;&#x636E;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x904D;&#x5386;&#xFF0C;&#x5305;&#x62EC;&#x5B50;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90FD;&#x52A0;&#x4E0A; setter &#x548C; getter &#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x7ED9;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x67D0;&#x4E2A;&#x503C;&#x8D4B;&#x503C;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1; setter&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x80FD;&#x76D1;&#x542C;&#x5230;&#x4E86;&#x6570;&#x636E;&#x53D8;&#x5316;</p>
+</li>
+<li><p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;compile &#x89E3;&#x6790;&#x6A21;&#x677F;&#x6307;&#x4EE4;&#xFF0C;&#x5C06;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x66FF;&#x6362;&#x6210;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x521D;&#x59CB;&#x5316;&#x6E32;&#x67D3;&#x9875;&#x9762;&#x89C6;&#x56FE;&#xFF0C;&#x5E76;&#x5C06;&#x6BCF;&#x4E2A;&#x6307;&#x4EE4;&#x5BF9;&#x5E94;&#x7684;&#x8282;&#x70B9;&#x7ED1;&#x5B9A;&#x66F4;&#x65B0;&#x51FD;&#x6570;&#xFF0C;&#x6DFB;&#x52A0;&#x76D1;&#x542C;&#x6570;&#x636E;&#x7684;&#x8BA2;&#x9605;&#x8005;&#xFF0C;&#x4E00;&#x65E6;&#x6570;&#x636E;&#x6709;&#x53D8;&#x52A8;&#xFF0C;&#x6536;&#x5230;&#x901A;&#x77E5;&#xFF0C;&#x66F4;&#x65B0;&#x89C6;&#x56FE;</p>
+</li>
+<li>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A;Watcher &#x8BA2;&#x9605;&#x8005;&#x662F; Observer &#x548C; Compile &#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x6865;&#x6881;&#xFF0C;&#x4E3B;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x662F;:&#x5728;&#x81EA;&#x8EAB;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x5F80;&#x5C5E;&#x6027;&#x8BA2;&#x9605;&#x5668;(dep)&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x81EA;&#x5DF1;&#x81EA;&#x8EAB;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A; update()&#x65B9;&#x6CD5;&#x5F85;&#x5C5E;&#x6027;&#x53D8;&#x52A8; dep.notice()&#x901A;&#x77E5;&#x65F6;&#xFF0C;&#x80FD;&#x8C03;&#x7528;&#x81EA;&#x8EAB;&#x7684; update() &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x89E6;&#x53D1; Compile &#x4E2D;&#x7ED1;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x5219;&#x529F;&#x6210;&#x8EAB;&#x9000;&#x3002;</li>
+<li>&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;MVVM &#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x6574;&#x5408; Observer&#x3001;Compile &#x548C; Watcher &#x4E09;&#x8005;&#xFF0C;&#x901A;&#x8FC7; Observer &#x6765;&#x76D1;&#x542C;&#x81EA;&#x5DF1;&#x7684; model &#x6570;&#x636E;&#x53D8;&#x5316;&#xFF0C;&#x901A;&#x8FC7; Compile &#x6765;&#x89E3;&#x6790;&#x7F16;&#x8BD1;&#x6A21;&#x677F;&#x6307;&#x4EE4;&#xFF0C;&#x6700;&#x7EC8;&#x5229;&#x7528; Watcher &#x642D;&#x8D77; Observer &#x548C; Compile &#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x6865;&#x6881;&#xFF0C;&#x8FBE;&#x5230;&#x6570;&#x636E;&#x53D8;&#x5316; -&gt; &#x89C6;&#x56FE;&#x66F4;&#x65B0;&#xFF1B;&#x89C6;&#x56FE;&#x4EA4;&#x4E92;&#x53D8;&#x5316;(input) -&gt; &#x6570;&#x636E; model &#x53D8;&#x66F4;&#x7684;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x6548;&#x679C;&#x3002;</li>
+</ul>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;</p>
+<p><a href="https://juejin.im/post/5a4b3cbb6fb9a045211f131d" target="_blank">&#x5927;&#x767D;&#x8BDD;Vue&#x6E90;&#x7801;</a></p>
+<p><a href="https://juejin.im/post/5cf66d586fb9a07ed2245b28" target="_blank"> Vue &#x54CD;&#x5E94;&#x5F0F;&#x539F;&#x7406;</a> </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; vimalakirti.fun 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-08-08 00:20:28
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="vuex.html" class="navigation navigation-prev " aria-label="Previous page: vuex">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vue 123.html" class="navigation navigation-next " aria-label="Next page: vue123">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"vue响应原理","level":"5.1.2","depth":2,"next":{"title":"vue123","level":"5.1.3","depth":2,"path":"blog/VUE-Library/vue 123.md","ref":"blog/VUE-Library/vue 123.md","articles":[]},"previous":{"title":"vuex","level":"5.1.1","depth":2,"path":"blog/VUE-Library/vuex.md","ref":"blog/VUE-Library/vuex.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","donate","tbfed-pagefooter","baidu-tongji","anchor-navigation-ex"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy vimalakirti.fun 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://i.loli.net/2019/08/05/N1VSJp7ODEzxmGo.jpg","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://i.loli.net/2019/08/05/3Lpg9kdaolcFIi4.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"Vimalate","repo":"document-library","type":"star","count":true,"size":"small"},{"user":"Vimalate","width":"160","type":"follow","count":false,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"vimalakirti","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Vimalakirti 的文档库","language":"zh-hans","gitbook":"*","description":"vimalakirti 的文档库. 里面包含了个人撰写的所有前端文章，例如 Vue、React,、ECharts、微信小程序等……"},"file":{"path":"blog/VUE-Library/vue响应原理.md","mtime":"2019-08-07T16:20:28.340Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-27T13:21:18.296Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
