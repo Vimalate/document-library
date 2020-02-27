@@ -16,7 +16,7 @@ module.exports = function () {
   console.log("CommonJS")
 }
 
-//b.js
+//main.js
 var a = require('./a');
 
 a();//"CommonJS"
