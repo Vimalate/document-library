@@ -83,6 +83,7 @@
     * [459-重复的子字符串](blog/LeetCode-Library/459-重复的子字符串.md)
     * [458-密钥格式化](blog/LeetCode-Library/458-密钥格式化.md)
     * [485-最大连续1的个数](blog/LeetCode-Library/485-最大连续1的个数.md)
+    * [496-下一个更大元素](blog/LeetCode-Library/496-下一个更大元素.md)
 
 
 * [其他文档库](blog/Other-Library/index.md)
