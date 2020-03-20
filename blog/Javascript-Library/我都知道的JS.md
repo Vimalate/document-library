@@ -1,6 +1,6 @@
 # 我都知道的JS  
 
-### 1、for...in和for...of的区别？  
+## 1、for...in和for...of的区别？  
 
 **for in更适合遍历对象，不要使用for in遍历数组。**
 
@@ -30,7 +30,7 @@ nodeJS自带模块化
 
 支持import引入另一个js
 
-### 3、cookie 和 token 都存放在 header 中，为什么不会劫持 token？
+## 3、cookie 和 token 都存放在 header 中，为什么不会劫持 token？
 
 cookie：登陆后后端生成一个sessionid放在cookie中返回给客户端，并且服务端一直记录着这个sessionid，客户端以后每次请求都会带上这个sessionid，服务端通过这个sessionid来验证身份之类的操作。所以别人拿到了cookie拿到了sessionid后，就可以完全替代你。
 
@@ -57,7 +57,7 @@ token
 
 **总结：**CSRF攻击的原因是浏览器会自动带上cookie，而浏览器不会自动带上token
 
-### 4、下列代码打印什么？
+## 4、下列代码打印什么？
 
 ```javascript
 var b = 10;
@@ -74,7 +74,7 @@ var b = 10;
 首先函数声明比变量要高，其次b = 20 没有var 获取其他，说明是window最外层定义的变量。
 js作用域中，先找最近的 那就是b fn ，直接打印了，如果 b = 20 有var 那就是打印20
 
-### 5、（京东）下面代码中 a 在什么情况下会打印 1？
+## 5、下面代码中 a 在什么情况下会打印 1？
 
 ```javascript
 var a = ?;
@@ -112,7 +112,7 @@ if(a == 1 && a == 2 && a == 3){
 
 上栗valueOf改为toString即可 
 
-### 6、数组的splice和slice的用法和区别
+## 6、数组的splice和slice的用法和区别
 
 **1. splice(start,deleteCount,item1,item2.....);**
 
@@ -133,7 +133,7 @@ if(a == 1 && a == 2 && a == 3){
 - join() 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔
 - reverse() 颠倒数组中元素的顺序
 
-### 7、（百度）实现 (5).add(3).minus(2) 功能。
+## 7、实现 (5).add(3).minus(2) 功能。
 
 ```javascript
 Number.prototype.add=function(n){
@@ -145,7 +145,7 @@ Number.prototype.minus=function(n){
 console.log((5).add(3).minus(2))
 ```
 
-### 8、Vue 的响应式原理中 Object.defineProperty 有什么缺陷？为什么在 Vue3.0 采用了 Proxy，抛弃了 Object.defineProperty？
+## 8、Vue 的响应式原理中 Object.defineProperty 有什么缺陷？为什么在 Vue3.0 采用了 Proxy，抛弃了 Object.defineProperty？
 
 Object.defineProperty无法监控到数组下标 的变化，导致通过数组下标添加元素，不能实时响应；
 
@@ -153,7 +153,7 @@ Object.defineProperty只能劫持对象的属性，从而需要对每个对象�
 
 Proxy不仅可以代理对象，还可以代理数组。还可以代理动态增加的属性
 
-### 9、Vue 的父组件和子组件生命周期钩子执行顺序是什么 ？
+## 9、Vue 的父组件和子组件生命周期钩子执行顺序是什么 ？
 
 1. 加载渲染过程
    `父beforeCreate->父created->父beforeMount->子beforeCreate->子created->子beforeMount->子mounted->父mounted`
@@ -166,7 +166,7 @@ Proxy不仅可以代理对象，还可以代理数组。还可以代理动态增
 
 **总结：从外到内，再从内到外**
 
-### 10、 JS String 和 new String的区别
+## 10、 JS String 和 new String的区别
 
 
 当通过new 调用 String()时,返回的是一个object
@@ -177,7 +177,7 @@ Proxy不仅可以代理对象，还可以代理数组。还可以代理动态增
 
 ![](https://i.loli.net/2019/07/25/5d393bc29256718027.png)
 
-## 实现add函数,让add(a)(b)和add(a,b)两种调用结果相同
+## 11、实现add函数,让add(a)(b)和add(a,b)两种调用结果相同
 
 ```js
 function add(a,b) {
@@ -190,7 +190,7 @@ function add(a,b) {
 }
 ```
 
-## 如何让：a == 1 && a == 2 && a == 3
+## 12、如何让：a == 1 && a == 2 && a == 3
 
 ```js
 const a = {
@@ -202,7 +202,7 @@ const a = {
 }
 ```
 
-## 如何让事件先冒泡后捕获
+## 13、如何让事件先冒泡后捕获
 
 根据 w3c 标准，事件是先捕获，后冒泡的，若要实现事件先冒泡后捕获，给一个元素绑定两个 addEventlistener，其中一个第三个参数设置为 false(也即默认冒泡) ，另一个设置 true ，调整代码顺序， 设置 false 的事件放于设置 true 的前面。
 
