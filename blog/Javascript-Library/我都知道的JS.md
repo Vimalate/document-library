@@ -240,3 +240,36 @@ unction instanceof(left, right) {
 }
 ```
 
+## 防抖和节流
+
+**防抖**：一个有着原则的程序员，必须确保一定的休息时间，期间啥事也不管，有人打扰则重新计算休息时间。休息期间吃饱喝足了才开工。(写了一句代码，必须休息两个小时，谁来打扰，则重新开始休息两小时)
+
+```js
+const debounce = (fn, delay=500) => {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+};
+```
+防抖使用场景：input 输入事件
+
+**节流**：一个没有感情的程序员，在一定的时间内只会写一句代码，不管多少需求堆积，因为必须保证其余时间充分的摸鱼。(两小时内只写一句代码，其余的时间保证充分摸鱼)
+
+```js
+const throttle = (fn, delay = 500) => {
+  let flag = true;
+  return (...args) => {
+    if (!flag) return;
+    flag = false;
+    setTimeout(() => {
+      fn.apply(this, args);
+      flag = true;
+    }, delay);
+  };
+};
+```
+节流使用场景：scroll事件
